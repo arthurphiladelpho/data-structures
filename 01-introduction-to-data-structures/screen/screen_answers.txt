@@ -1,0 +1,8 @@
+1. How does your data structure allow developers to access and manipulate the data?
+The screen's data structure consists of a multidimensional array (ie: arr[y][x], where y is the height of the screen and x is the width). x is only created if the pixel exists (for a better memory usage). # screen = [ [[]],[],[[]] ]
+
+2. If a developer wanted to find a specific element in your data structure, how would you search for it?
+You would search the @screen for a @pixel by looking at the @screen[y][x] position, y being the height of the element you want and x being the width of that element.
+
+3. What other real-world data can each structure represent?
+The same data structure used for the screen/pixel relationship can be used for board games such as chess.

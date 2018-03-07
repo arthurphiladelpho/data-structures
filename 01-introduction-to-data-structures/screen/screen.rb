@@ -10,7 +10,7 @@ class Screen
     @height = height
     
     @screen = []
-
+    
     @height.times do |i|
       @screen << []
     end
@@ -18,23 +18,14 @@ class Screen
   end
 
   def insert(pixel, x, y)
-  #  Test
-  #  pixel = Pixel.new(255, 200, 175, 1, 1)
-  #  screen.insert(pixel, 1, 1)
-     @screen[y][x] = pixel if x < @width
+    @screen[y][x] = pixel if x < @width
+    puts @screen
+    puts @screen[y]
+    puts @screen[y][x]
   end
 
   def at(x, y)
     return @screen[y][x]
-    # @screen.each { |i|
-    #   if i == y
-    #     @screen[i].each { |j|
-    #       if j == x
-    #         return @screen[y][x]
-    #       end
-    #     }
-    #   end
-    # }
   end
 
   private
