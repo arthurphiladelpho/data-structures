@@ -47,6 +47,7 @@ RSpec.describe OpenAddressing, type: Class do
     end
 
     it "sets the value of key to value" do
+      puts ">>>  #{star_wars_movies.instance_variable_get(:@hash)}"
       expect(star_wars_movies["Star Wars: The Phantom Menace"]).to eq "Number One"
       expect(star_wars_movies["Star Wars: Attack of the Clones"]).to eq "Number Two"
       expect(star_wars_movies["Star Wars: Revenge of the Sith"]).to eq "Number Three"

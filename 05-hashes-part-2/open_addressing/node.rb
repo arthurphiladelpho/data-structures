@@ -8,4 +8,8 @@ class Node
   	@value = value
   	@next = nil
   end
+
+  def to_s
+  	"#{key}: #{value}"
+  end
 end
