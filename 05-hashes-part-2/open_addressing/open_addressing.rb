@@ -8,16 +8,16 @@ class OpenAddressing
 
   def []=(key, value)
     i = index(key, size)
-    if !@hash[i]
-      puts "#{hash[i]} #{key}"
 
+    if !@hash[i]
+      # puts "#{hash[i]} #{key}"
       @hash[i] = Node.new(key, value)
       @count += 1
     elsif @hash[i].key == key && @hash[i].value == value
-        puts "B#{hash[i]} #{key}"
+        # puts "B#{hash[i]} #{key}"
       return @hash[i]
     else
-        puts "C#{hash[i]} #{key}"
+        # puts "C#{hash[i]} #{key}"
       next_index = next_open_index(i)
       if @hash[i].key == key && @hash[i].value != value && next_index == -1
         resize
@@ -62,7 +62,7 @@ class OpenAddressing
 
   # Simple method to return the number of items in the hash
   def size
-    @hash.length
+    @hash.length 
   end
 
   # Resize the hash
