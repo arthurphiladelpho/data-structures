@@ -40,5 +40,13 @@ class BinarySearchTree
 
   # Recursive Breadth First Search
   def printf(children=nil)
+    children = [@root] if children == nil
+    row = []
+    children.each do |child|
+      puts "#{child.title}: #{child.rating}"
+      row.push(child.left) if child.left
+      row.push(child.right) if child.right
+    end
+    row.length == 0 ? nil : printf(row)
   end
 end
