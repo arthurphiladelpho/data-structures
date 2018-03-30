@@ -1,0 +1,12 @@
+- Describe three collision resolution strategies not mentioned here.
+
+1. Coalesced hashing
+—	A hybrid between separate chaining and open addressing. Links together chains of nodes with the hash table. Unlike separate chaining it cannot have more elements than table slots, still it doesn’t exhibit clustering effects. It achieves better space usage and cache advantages over separate chaining.
+2. Hopscotch hashing
+— Combines cuckoo hashing and linear probing, generally avoids their limitations. Appears to work well even when the LF exceeds 0.9. The hopscotch hashing algorithm defines a neighborhood of buckets near the original hash bucket where the given entry is always found. The search is then limited to this neighborhood of buckets.
+3. Robin Hood hashing 
+
+
+- Create your own collision resolution strategy and describe how it works.
+
+My collision strategy would be to always keep to always keep the last index of the inner Array empty, and add the new item there. After the item is added, I create another empty space at the end of the array.
